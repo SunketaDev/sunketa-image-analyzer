@@ -22,7 +22,27 @@
         <main.verticle>com.popsockets.imageanalyzer.manager.MainVerticle</main.verticle>
         <launcher.class>io.vertx.core.Launcher</launcher.class>
     </properties>
-
+    <repositories>
+        <repository>
+            <id>SunketaDev</id>
+            <name>common-jar</name>
+            <url>https://github.com/SunketaDev/common-jar/raw/dev/</url>
+            <snapshots>
+                <enabled>true</enabled>                
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -69,6 +89,7 @@
             <groupId>io.vertx</groupId>
             <artifactId>vertx-rx-java2</artifactId>
             <scope>test</scope>
+            <version>${vertx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -82,11 +103,6 @@
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
-            <artifactId>vertx-web</artifactId>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
             <artifactId>vertx-hazelcast</artifactId>
             <version>${vertx.version}</version>
         </dependency>
@@ -94,12 +110,13 @@
             <groupId>io.vertx</groupId>
             <artifactId>vertx-service-discovery</artifactId>
             <type>jar</type>
+            <version>${vertx.version}</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-service-discovery-bridge-docker-links</artifactId>
             <type>jar</type>
-            <version>3.9.1</version>
+            <version>${vertx.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -129,6 +146,18 @@
             <groupId>com.twelvemonkeys.imageio</groupId>
             <artifactId>imageio-tiff</artifactId>
             <version>3.6.4</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.49</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.sunketa</groupId>
+            <artifactId>sunketa-exceptions</artifactId>
+            <version>0.0.1</version>
             <type>jar</type>
         </dependency>
     </dependencies>
