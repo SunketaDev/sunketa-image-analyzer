@@ -1,0 +1,13 @@
+{
+    "db_url": "jdbc:mysql://10.45.0.14:3306/recipe-analyzer?zeroDateTimeBehavior=convertToNull",
+    "db_name": "recipe-analyzer",
+    "db_username": "",
+    "db_password": "",
+    "computer_vision.path": "https://psimagevision.cognitiveservices.azure.com/vision/v3.2/",
+    "computer_vision.key": "",
+    "service.host": "localhost",
+    "service.port": 9878,
+    "discovery.address": "imageanalyzer-services",
+    "discovery.name": "imageanalyzer",
+    "url_recipe": "http://cz.drrv.co/recipe/"
+}
